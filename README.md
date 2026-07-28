@@ -2,9 +2,9 @@
 
 Technical portfolio maintained by Aleksandar Momchev.
 
-This repository presents sanitized documentation from independent projects involving workflow automation, API integration, self-hosted infrastructure, market-data processing, WordPress, technical SEO and AI-assisted content operations.
+This repository presents sanitized documentation from independent technical projects involving workflow automation, API integration, self-hosted infrastructure, market-data processing, WordPress, technical SEO and AI-assisted content operations.
 
-These are pre-revenue projects developed without paid clients or commercial customer deployments.
+These projects were developed without paid clients or commercial customer deployments.
 
 ## Technical Areas
 
@@ -14,6 +14,7 @@ These are pre-revenue projects developed without paid clients or commercial cust
 - Data transformation and conditional routing
 - Error handling and workflow recovery
 - Duplicate prevention and idempotency
+- Google Sheets as an operational control layer
 - Linux and Ubuntu administration
 - Docker and Docker Compose
 - Nginx and systemd
@@ -40,19 +41,21 @@ The project demonstrates hands-on work with:
 - systemd services
 - Cloudflare Tunnels
 - local language models
-- API routing
+- API gateways and routing
 - monitoring and health checks
-- workflow validation
+- structured workflow validation
 - multi-server orchestration
 - technical troubleshooting
+- documentation and maintenance
 
 I personally configure, test, troubleshoot, document and maintain the supporting systems.
 
 - Website: https://aituning.io
 - GitHub organization: https://github.com/AITuningEU
 - Technical overview: [docs/ai-tuning-overview.md](docs/ai-tuning-overview.md)
+- Infrastructure overview: [docs/infrastructure-architecture.md](docs/infrastructure-architecture.md)
 
-## Market Data Project: WaveFibs
+## Market-Data Project: WaveFibs
 
 WaveFibs is an independent market-data automation and technical-analysis project.
 
@@ -85,11 +88,44 @@ It demonstrates:
 - technical SEO
 - structured content workflows
 - WordPress REST API publishing
-- automated publishing processes
+- Google Sheets workflow control
+- automated media generation and processing
+- WordPress media uploads
+- metadata and alt-text management
+- publishing validation
 - website operations
 - content organisation and maintenance
 
+The article workflow uses structured records for article configuration, SEO, sections, sources, links, media, authorship and validation before WordPress publishing is allowed.
+
 - Website: https://eatwithrhythm.com
+- Project overview: [docs/eat-with-rhythm-overview.md](docs/eat-with-rhythm-overview.md)
+- Sanitized n8n workflow examples: [docs/n8n-workflow-examples.md](docs/n8n-workflow-examples.md)
+
+## n8n Workflow Example
+
+The portfolio documents a sanitized version of the **EWR Article Pipeline v31 — Deterministic Preflight** workflow.
+
+The workflow includes patterns for:
+
+- selecting one eligible article from a queue
+- record locking and execution verification
+- reading structured data from multiple Google Sheets tabs
+- deterministic pre-write validation
+- blocker and warning classification
+- canonical article-package construction
+- media-generation job preparation
+- ComfyUI image generation
+- image conversion to WebP
+- WordPress REST API media upload
+- WordPress media metadata updates
+- article assembly and validation
+- failure-state recording
+- controlled publishing
+
+The complete workflow export is not published because it contains credential references, private infrastructure information, internal addresses and operational configuration.
+
+- Workflow examples: [docs/n8n-workflow-examples.md](docs/n8n-workflow-examples.md)
 
 ## Troubleshooting Focus
 
@@ -97,26 +133,25 @@ The portfolio includes sanitized examples involving:
 
 - missing or inconsistent workflow data
 - duplicate-record prevention
+- idempotency
 - API authentication failures
 - rate limits and temporary API failures
 - Linux and Docker service recovery
 - workflow error handling
 - monitoring and health checks
+- preserving failed records for review
+- separating temporary and permanent failures
 
 - Troubleshooting examples: [docs/troubleshooting-examples.md](docs/troubleshooting-examples.md)
 
-## Documentation
+## Portfolio Documentation
 
-Current and planned documentation includes:
-
-- AI Tuning technical overview
-- WaveFibs market-data automation overview
-- infrastructure architecture
-- n8n workflow examples
-- troubleshooting examples
-- monitoring and health checks
-- WordPress publishing automation
-- API integration examples
+- [AI Tuning technical overview](docs/ai-tuning-overview.md)
+- [Infrastructure architecture](docs/infrastructure-architecture.md)
+- [Sanitized n8n workflow examples](docs/n8n-workflow-examples.md)
+- [Automation and infrastructure troubleshooting examples](docs/troubleshooting-examples.md)
+- [WaveFibs market-data automation overview](docs/wavefibs-overview.md)
+- [Eat With Rhythm WordPress and content automation overview](docs/eat-with-rhythm-overview.md)
 
 ## Security and Privacy
 
@@ -126,14 +161,18 @@ This public repository does not contain:
 - API keys
 - OAuth tokens
 - `.env` files
+- credential values
 - private IP addresses
 - private endpoints
+- internal hostnames
 - internal server paths
-- credentials
+- Google Sheets document identifiers
 - personal data
 - complete unsanitized workflow exports
-- proprietary configuration
+- proprietary operational configuration
 - customer data
+
+Screenshots, workflow examples and diagrams are sanitized before publication.
 
 ## Professional Objective
 
@@ -145,6 +184,9 @@ I am seeking a fully remote junior or associate role involving:
 - WordPress and technical SEO
 - AI workflow operations
 - data and website operations
+- workflow troubleshooting and maintenance
+
+I am based in Varna, Bulgaria, available to start immediately and able to work up to 40 hours per week.
 
 ## Contact
 
